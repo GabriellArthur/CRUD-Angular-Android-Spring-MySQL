@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Pessoas</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-houver text-center">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>APELIDO</th>
+                        <th>AÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pessoa of pessoas">
+                        <td>{{pessoa.id}}</td>
+                        <td>{{pessoa.nome}}</td>
+                        <td>{{pessoa.apelido}}</td>
+                        <td>
+                            <button (click)="Editar(pessoa)" class="btn btn-warning">Edit</button>
+                            <button (click)="Delete(pessoa)" class="btn btn-danger"style="margin-left: 10px;">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
